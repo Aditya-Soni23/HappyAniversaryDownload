@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gift Download</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        button {
+            background-color: whitesmoke;
+            color: black;
+            width: 550px;
+            height: 100px;
+            font-weight: bolder;
+            border-radius: 50px;
+            margin-top: 70%;
+            font-size: 40px;
+        }
+    </style>
+    <center><button onclick="downloadApp()">Click to Download Gift!</button></center>
+
+    <script>
+        function downloadApp() {
+            var downloadLink = document.createElement('a');
+            // Use a relative path to the APK file in the same directory
+            downloadLink.href = 'app-release.apk';
+            downloadLink.download = 'app-release.apk';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+
+</html>
